@@ -1,0 +1,52 @@
+As a coach
+So I can get to know all students
+I want to see a list of students' names.
+
+As a coach
+So I can get to know all students
+I want to see a list of cohorts' names.
+
+As a coach
+So I can get to know all students
+I want to see a list of cohorts' starting dates.
+
+As a coach
+So I can get to know all students
+I want to see a list of students' cohorts.
+
+
+Nouns :
+
+student names, cohort names, student cohorts, starting date
+
+
+
+| Record                | Properties          |
+| --------------------- | ------------------  |
+| student               | name, cohort
+| cohort                | name, start_date
+
+1. Name of the first table (always plural): `cohort` 
+
+    Column names: `name`, `start_date`
+
+2. Name of the second table (always plural): `students` 
+
+    Column names: `name`
+
+Table: cohorts
+id: SERIAL PRIMARY KEY
+name: text
+start_date: date
+
+Table: students
+id: SERIAL PRIMARY KEY
+name: text
+
+
+1. Can one COHORT have many STUDENTS? (Yes)
+2. Can one STUDENT have many COHORTS? (No)
+
+-> Therefore,
+-> A STUDENT BELONGS TO A COHORT
+-> Therefore, the foreign key is on the students table.
